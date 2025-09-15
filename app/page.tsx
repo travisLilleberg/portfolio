@@ -34,14 +34,13 @@ export default function App() {
     });
   }
 
-    
   function deleteTodo(id: string) {
     client.models.Todo.delete({ id })
   }
 
   return (
     <main>
-      <h1>{user?.signInDetails?.loginId}'s todos</h1>
+      <h1>{user?.signInDetails?.loginId}{"'s todos"}</h1>
       <button onClick={createTodo}>+ new</button>
       <ul>
         {todos.map((todo) => (
